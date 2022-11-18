@@ -189,11 +189,11 @@ public class InMemoryProductServiceImpl implements ProductService {
 
 	@Override
 	public Product getMinPriceProduct() {
-		//Product tempPr =null;
-		Product tempPr=prlist[0];
+		  Product tempPr =null;
+		//Product tempPr=prlist[0];
 		double minPrice = prlist[0].getProdPrice();
 		for (Product pr : prlist) {
-			if (pr != null && pr.getProdPrice()< minPrice) {
+			if (pr != null && pr.getProdPrice()<= minPrice) {
 				minPrice = pr.getProdPrice();
 				tempPr = pr;
 				
